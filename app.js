@@ -32,7 +32,7 @@ const mongoConnect = async ()=>{
     console.log('Mongo to connect' + 'on port' + process.env.PORT)
   } catch (err) {
     console.log(err)
-    porecess.ext(1)
+    process.exit(1)
   }
 }
 
