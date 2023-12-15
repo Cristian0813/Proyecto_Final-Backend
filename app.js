@@ -21,9 +21,7 @@ const mongoConnect = async () => {
       useNewUrlParser: true,
       useUnifiedTopology: true,
     });
-    console.log('Conexión exitosa a MongoDB');
   } catch (err) {
-    console.error('Error al conectar a MongoDB:', err);
     process.exit(1);
   }
 };
@@ -48,9 +46,7 @@ app.use((err, req, res, next) => {
 
 // Escuchar en 0.0.0.0: process.env.PORT
 const port = process.env.PORT || 3001;
-app.listen(port, '0.0.0.0', () => {
-  console.log(`Aplicación escuchando en http://0.0.0.0:${port}`);
-});
+app.listen (port, '0.0.0.0')
 
 mongoConnect();
 module.exports = app;

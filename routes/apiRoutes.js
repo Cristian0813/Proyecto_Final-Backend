@@ -16,5 +16,5 @@ router.get('/contacto', (req, res) => {
   res.json({ asesor, asesor2 });
 });
 
-router.post('/cliente', contactController.create);  // Asegúrate de usar 'create' o la función que maneje la creación de clientes
+router.post('/cliente', contactController.create);
 module.exports = router;
