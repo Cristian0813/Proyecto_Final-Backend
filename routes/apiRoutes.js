@@ -10,7 +10,7 @@ router.get('/contacto', (req, res) => {
     email: 'mallasjf@outlook.com',
   };
   const asesor2 = {
-    nombre2: 'Call Center',
+    nombre2: 'Yuliana Ramirez',
     celular2: '+57 3052927699',
   };
   res.json({ asesor, asesor2 });

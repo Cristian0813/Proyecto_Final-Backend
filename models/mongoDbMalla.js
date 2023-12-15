@@ -39,8 +39,8 @@ clienteSchema.post('save', function (doc, next) {
     const mailOptions = {
         from: process.env.EMAIL_USER,
         to: process.env.EMAIL_USER,
-        subject: 'Nuevo cliente agregado',
-        text: `El cliente ${doc.first_name} ${doc.last_name} quiere contactarse contigo para saber sobre ${doc.description}, por los siguientes mediostanto email ${doc.email} y tel´lefono ${doc.phone_number} puedes contactar+ a ${doc.first_name}
+        subject: 'Nuevo cliente agregado ',
+        text: `El cliente ${doc.first_name} ${doc.last_name} quiere contactarse contigo para saber sobre ${doc.description}, por los siguientes medios tanto correo electrónico ${doc.email} y teléfono ${doc.phone_number} puedes contactar a ${doc.first_name}
         \n chao`
     };
 
