@@ -54,6 +54,4 @@ clienteSchema.post('save', function (doc, next) {
 
     next();
 });
-
-const mongoDB = mongoose.model('Clientes', clienteSchema);
-module.exports = mongoDB;
+module.exports = mongoose.model('Clientes', clienteSchema);

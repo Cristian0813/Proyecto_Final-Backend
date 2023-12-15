@@ -17,10 +17,13 @@ app.use(cors());
 
 const mongoConnect = async () => {
   try {
-    await mongoose.connect(process.env.MONGODB_URL);
-    console.log('Aplicación conectada al puerto ' + process.env.PORT);
+    await mongoose.connect(process.env.MONGODB_URL, {
+      useNewUrlParser: true,
+      useUnifiedTopology: true,
+    });
+    console.log('Conexión exitosa a MongoDB');
   } catch (err) {
-    console.log(err);
+    console.error('Error al conectar a MongoDB:', err);
     process.exit(1);
   }
 };
@@ -32,8 +35,19 @@ app.get('/', (req, res) => {
   res.send('¡La aplicación está funcionando correctamente!');
 });
 
+// Ruta de manejo de errores para rutas no definidas
+app.use((req, res, next) => {
+  res.status(404).send('Página no encontrada');
+});
+
+// Manejo global de errores
+app.use((err, req, res, next) => {
+  console.error('Error global:', err);
+  res.status(500).send('Error interno del servidor');
+});
+
 // Escuchar en 0.0.0.0: process.env.PORT
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 app.listen(port, '0.0.0.0', () => {
   console.log(`Aplicación escuchando en http://0.0.0.0:${port}`);
 });

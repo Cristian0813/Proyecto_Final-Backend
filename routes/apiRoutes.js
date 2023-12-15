@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const contactController = require('../controllers/contactController')
+const contactController = require('../controllers/contactController');
 
 router.get('/contacto', (req, res) => {
   const asesor = {
@@ -16,5 +16,5 @@ router.get('/contacto', (req, res) => {
   res.json({ asesor, asesor2 });
 });
 
-router.post('/cliente', contactController.create)
+router.post('/cliente', contactController.create);  // Asegúrate de usar 'create' o la función que maneje la creación de clientes
 module.exports = router;
