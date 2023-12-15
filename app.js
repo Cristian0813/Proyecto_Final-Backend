@@ -27,6 +27,11 @@ const mongoConnect = async () => {
 
 app.use('/api', apiRoutes);
 
+// Ruta para la URL base ("/")
+app.get('/', (req, res) => {
+  res.send('¡La aplicación está funcionando correctamente!');
+});
+
 // Escuchar en 0.0.0.0: process.env.PORT
 const port = process.env.PORT || 3000;
 app.listen(port, '0.0.0.0', () => {
