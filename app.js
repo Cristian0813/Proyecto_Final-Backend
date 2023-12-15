@@ -1,17 +1,11 @@
+require('dotenv').config();
+
 const express = require('express');
-const createError = require('http-errors');
 const path = require('path');
 const cookieParser = require('cookie-parser');
-const logger = require('morgan');
-
 const apiRoutes = require('./routes/apiRoutes');
-
-
 const mongoose = require('mongoose');
-
 const cors = require('cors');
-
-require('dotenv').config();
 
 const app = express();
 
@@ -29,7 +23,7 @@ const mongoConnect = async ()=>{
     await mongoose.connect(
       process.env.MONGODB_URL
     )
-    console.log('Mongo to connect' + 'on port' + process.env.PORT)
+    console.log('Aplicación conectada al puerto ' + process.env.PORT)
   } catch (err) {
     console.log(err)
     process.exit(1)
