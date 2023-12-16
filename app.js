@@ -56,7 +56,7 @@ app.use((err, req, res, next) => {
 
 // Escuchar en 0.0.0.0: process.env.PORT
 const port = process.env.PORT || 3001;
-app.listen(port, '0.0.0.0', () => {
+app.listen(port, () => {
   console.log(`Aplicación escuchando en http://0.0.0.0:${port}`);
 });
 
