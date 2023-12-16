@@ -13,9 +13,9 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Configuración específica de CORS a
+// Configuración de CORS para permitir cualquier origen
 const corsOptions = {
-  origin: 'http://proyecto-final-backend-6jm6.onrender.com', 
+  origin: '*',
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
