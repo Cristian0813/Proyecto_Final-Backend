@@ -13,7 +13,15 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(cors());
+// Configuración específica de CORS
+const corsOptions = {
+  origin: 'http://proyecto-final-backend-6jm6.onrender.com', 
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+
+app.use(cors(corsOptions));
 
 const mongoConnect = async () => {
   try {
