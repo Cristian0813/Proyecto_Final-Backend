@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Configuración específica de CORS
+// Configuración específica de CORS a
 const corsOptions = {
   origin: 'http://proyecto-final-backend-6jm6.onrender.com', 
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
