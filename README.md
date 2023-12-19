@@ -1,7 +1,7 @@
-# Proyecto final Frontend
+# Proyecto final Backend
 Este es el repositorio backend para el proyecto final de la cerrajería es complentario con https://github.com/Cristian0813/Proyecto_final_frontend.git. Este proyecto fue desarrollado utilizando Node.js, Express y MongoDB para proporcionar servicios de backend, incluido el envío de correos electrónicos.
 
-*_Estos son solo ejemplos básicos, ajusta y amplía según las necesidades específicas de tu proyecto._**
+**_Estos son solo ejemplos básicos, ajusta y amplía según las necesidades específicas de tu proyecto._**
 
 ### Requisitos
 Asegúrate de tener Node.js y npm instalados en tu máquina.
