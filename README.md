@@ -27,7 +27,7 @@ Asegúrate de tener Node.js y npm instalados en tu máquina.
 ## Configuración del entorno
 Crea un archivo **_.env_** en el directorio raíz y proporciona las siguientes variables de entorno:
 
-```
+```env
 PORT=tu_puerto
 MONGODB_URL=tu_url_de_mongodb
 EMAIL_SERVICE=gmail
