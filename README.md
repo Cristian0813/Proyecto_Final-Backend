@@ -88,7 +88,7 @@ const transporter = nodemailer.createTransport({
 - [body-parser](https://www.npmjs.com/package/body-parser)  
 - [cookie-parser](https://www.npmjs.com/package/cookie-parser)
 - [cors](https://www.npmjs.com/package/cors)
-- [dontenv](https://www.npmjs.com/package/dotenv)
+- [dotenv](https://www.npmjs.com/package/dotenv)
 - [express](https://www.npmjs.com/package/express)
 - [http-errors](https://www.npmjs.com/package/http-errors)
 - [jade](https://www.npmjs.com/package/jade)
